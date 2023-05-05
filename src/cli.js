@@ -9,3 +9,14 @@ export function askName() {
 export function getAnswer(answer) {
   return readlineSync.question(answer);
 }
+
+export function message(right, current) {
+  if (right === current) {
+    return console.log('Correct!');
+  }
+  return console.log(`'${current}' is wrong answer ;(. Correct answer was '${right}'.`);
+}
+
+export function getRandomNumber() {
+  return Math.floor((Math.random() * 10) + 1);
+}
