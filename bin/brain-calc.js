@@ -31,12 +31,8 @@ function play() {
     }
     console.log(`Question: ${firstNumber} ${operator} ${secondNumber}`);
     const playerAnswer = +getAnswer('Your answer: ');
-    if (rightAnswer === playerAnswer) {
-      message(rightAnswer, playerAnswer);
-    } else {
-      message(rightAnswer, playerAnswer);
-      return console.log(`Let's try again, ${name}!`);
-    }
+    message(name, rightAnswer, playerAnswer);
+    if (rightAnswer !== playerAnswer) return null;
   }
   return console.log(`Congratulations, ${name}!`);
 }

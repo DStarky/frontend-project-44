@@ -15,12 +15,8 @@ function play() {
     const rightAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
     console.log(`Question: ${randomNumber}`);
     const playerAnswer = getAnswer('Your answer: ');
-    if (rightAnswer === playerAnswer) {
-      message(rightAnswer, playerAnswer);
-    } else {
-      message(rightAnswer, playerAnswer);
-      return console.log(`Let's try again, ${name}!`);
-    }
+    message(name, rightAnswer, playerAnswer);
+    if (rightAnswer !== playerAnswer) return null;
   }
   return console.log(`Congratulations, ${name}!`);
 }

@@ -10,11 +10,11 @@ export function getAnswer(answer) {
   return readlineSync.question(answer);
 }
 
-export function message(right, current) {
+export function message(name, right, current) {
   if (right === current) {
     return console.log('Correct!');
   }
-  return console.log(`'${current}' is wrong answer ;(. Correct answer was '${right}'.`);
+  return console.log(`'${current}' is wrong answer ;(. Correct answer was '${right}'.\nLet's try again, ${name}!`);
 }
 
 export function getRandomNumber() {
